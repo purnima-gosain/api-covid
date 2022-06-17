@@ -1,8 +1,8 @@
 class AllCases {
   final num? updated;
-  final num? deaths;
-  final num? recovered;
-  final num? active;
+  final num deaths;
+  final num recovered;
+  final num active;
   const AllCases(
       {required this.updated,
       required this.deaths,

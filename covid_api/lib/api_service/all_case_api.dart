@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 AllCases? allCases;
 
-Future<AllCases> fetchAllCaseData() async {
+Future<AllCases?> fetchAllCaseData() async {
   final Dio dio = Dio();
   final response = await dio.get("https://disease.sh/v3/covid-19/all");
   if (response.statusCode == 200) {

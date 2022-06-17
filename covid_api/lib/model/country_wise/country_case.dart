@@ -4,7 +4,9 @@ class Country {
   const Country({required this.country, required this.timeline});
 
   factory Country.fromJson(Map<String, dynamic> json) {
-    return Country(country: json["country"], timeline: json["timeline"]);
+    return Country(
+        country: json["country"],
+        timeline: TimeLine.fromJson(json["timeline"]));
   }
 }
 

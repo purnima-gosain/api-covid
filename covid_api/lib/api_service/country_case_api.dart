@@ -10,11 +10,16 @@ Future<List<Country>> fetchCountryData() async {
       "https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1");
 
   if (response.statusCode == 200) {
+    print(response.statusCode);
     List<dynamic> values = [];
     values = response.data;
+    print(response.data);
     if (values.isNotEmpty) {
+      print("hello");
       for (int i = 0; i < values.length; i++) {
+        print("******************");
         if (values[i] != null) {
+          print("##############");
           countryCase.add(Country.fromJson(values[i]));
         }
       }
